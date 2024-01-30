@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/backgroundImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/currentTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:text="00:00:00"
+            android:textAlignment="center"
+            android:textSize="56sp"/>
+
+        <TextView
+            android:id="@+id/day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/countdownTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alarm in: 00:00:00"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="400px"
+            android:layout_height="400px" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnPrevious"
+                android:layout_width="37dp"
+                android:layout_height="76dp"
+                android:layout_weight="1"
+                android:background="@drawable/sol"/>
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="37dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:background="@drawable/sag"/>
+        </LinearLayout>
+
+
+        <ListView
+            android:id="@+id/alarmListView"
+            android:layout_width="wrap_content"
+            android:layout_height="240dp"
+            android:clickable="true" />
+
+        <Button
+            android:id="@+id/setAlarmButton"
+            android:layout_width="95dp"
+            android:layout_height="93dp"
+            android:backgroundTint="#C50001"
+            android:onClick="onClick"
+            android:text="+"
+            android:textSize="50dp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

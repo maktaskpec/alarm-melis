@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- genişlik değeri -->
+    <dimen name="new_width">247dp</dimen>
+
+    <!-- yükseklik değeri -->
+    <dimen name="new_height">278dp</dimen>
+
+</resources>
